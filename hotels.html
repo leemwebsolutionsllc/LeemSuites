@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotels - Hotel Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/1604390dea.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">LeemSuites</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="locations.html">Locations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="meetings-events.html">Meetings & Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="signin.html">Sign In/Join</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hotels Page Content -->
+    <header class="small-hero text-center text-white d-flex align-items-center justify-content-center">
+        <div class="container">
+            <h1 class="display-4">Hotels in <span id="selected-state">All Locations</span></h1>
+            <p class="lead">Find the perfect place to stay</p>
+        </div>
+    </header>
+
+    <!-- Filter Section -->
+    <div class="container my-4">
+        <div class="row">
+            <div class="col-md-3">
+                <input type="text" id="searchInput" class="form-control" placeholder="Search by name, city, state">
+            </div>
+            <div class="col-md-3">
+                <input type="text" id="filterCity" class="form-control" placeholder="Filter by city">
+            </div>
+            <div class="col-md-3">
+                <input type="text" id="filterState" class="form-control" placeholder="Filter by state">
+            </div>
+            <div class="col-md-3">
+                <input type="text" id="filterName" class="form-control" placeholder="Filter by hotel name">
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <h2 class="text-center">Available Hotels</h2>
+        <div class="row mt-4" id="hotels-container">
+            <!-- Hotel Cards will be inserted here by JavaScript -->
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <p>&copy; 2024 LeemSuites. All rights reserved.</p>
+        <p>Follow us on 
+            <a href="https://www.facebook.com/profile.php?id=61561361492514" class="text-white"><i class="fab fa-facebook-f"></i></a>
+            <a href="www.linkedin.com/in/saalim-mixon-21b468243" class="text-white"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/leemwebsolutionsllc/" class="text-white"><i class="fab fa-instagram"></i></a>
+        </p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="hotels.js"></script>
+    <script src="scripts.js"></script>
+
+</body>
+</html>

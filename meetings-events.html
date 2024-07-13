@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meetings & Events - Hotel Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/1604390dea.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">LeemSuites</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="locations.html">Locations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="meetings-events.html">Meetings & Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="signin.html">Sign In/Join</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Meetings & Events Page Content -->
+    <header class="small-hero text-center text-white d-flex align-items-center justify-content-center">
+        <div class="container">
+            <h1 class="display-4">Meetings & Events</h1>
+            <p class="lead">Plan your next event with us</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <h2 class="text-center">Host Your Next Event with Us</h2>
+        <div class="row mt-4">
+            <div class="col-md-6 animate-on-scroll">
+                <img src="conference.jpg" class="img-fluid clickable" alt="Conference Rooms" data-event="Conference Rooms">
+                <h3 class="mt-2">Conference Rooms</h3>
+                <p>Our state-of-the-art conference rooms are perfect for meetings and presentations.</p>
+            </div>
+            <div class="col-md-6 animate-on-scroll">
+                <img src="EventHalls.jpg" class="img-fluid clickable" alt="Event Halls" data-event="Event Halls">
+                <h3 class="mt-2">Event Halls</h3>
+                <p>Host your next big event in our spacious and elegant event halls.</p>
+            </div>
+            <div class="col-md-6 animate-on-scroll">
+                <img src="OutdoorVenues.jpg" class="img-fluid clickable" alt="Outdoor Venues" data-event="Outdoor Venues">
+                <h3 class="mt-2">Outdoor Venues</h3>
+                <p>Enjoy the beauty of nature with our stunning outdoor venues.</p>
+            </div>
+            <div class="col-md-6 animate-on-scroll">
+                <img src="BanquetHalls.jpg" class="img-fluid clickable" alt="Banquet Halls" data-event="Banquet Halls">
+                <h3 class="mt-2">Banquet Halls</h3>
+                <p>Celebrate in style with our beautifully designed banquet halls.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Booking Modal -->
+    <div class="modal fade" id="eventBookingModal" tabindex="-1" aria-labelledby="eventBookingModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="eventBookingModalLabel">Book Event</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="eventBookingForm">
+                        <div class="mb-3">
+                            <label for="eventName" class="form-label">Event Type</label>
+                            <input type="text" class="form-control" id="eventName" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label for="customerName" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="customerName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="customerEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="customerEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="eventDate" class="form-label">Event Date</label>
+                            <input type="date" class="form-control" id="eventDate" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="eventDuration" class="form-label">Duration (hours)</label>
+                            <input type="number" class="form-control" id="eventDuration" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="totalCost" class="form-label">Total Cost</label>
+                            <input type="text" class="form-control" id="totalCost" readonly>
+                        </div>
+                        <button type="button" class="btn btn-primary" id="calculateEventCostBtn">Calculate Cost</button>
+                        <button type="submit" class="btn btn-success">Book Now</button>
+                    </form>
+                    <div id="confirmationMessage" class="alert alert-success mt-3" style="display: none;">
+                        <h5>Booking Confirmed!</h5>
+                        <p>Thank you for booking your event with us! Your confirmation number is: <span id="confirmationNumber"></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <p>&copy; 2024 LeemSuites. All rights reserved.</p>
+        <p>Follow us on 
+            <a href="https://www.facebook.com/profile.php?id=61561361492514" class="text-white"><i class="fab fa-facebook-f"></i></a>
+            <a href="www.linkedin.com/in/saalim-mixon-21b468243" class="text-white"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/leemwebsolutionsllc/" class="text-white"><i class="fab fa-instagram"></i></a>
+        </p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll('.clickable').forEach(image => {
+                image.addEventListener('click', function () {
+                    const eventType = this.getAttribute('data-event');
+                    document.getElementById('eventName').value = eventType;
+                    const eventBookingModal = new bootstrap.Modal(document.getElementById('eventBookingModal'));
+                    eventBookingModal.show();
+                });
+            });
+
+            document.getElementById('calculateEventCostBtn').addEventListener('click', function () {
+                const eventDuration = document.getElementById('eventDuration').value;
+                const costPerHour = 100; // Example cost per hour
+                const totalCost = eventDuration * costPerHour;
+                document.getElementById('totalCost').value = `$${totalCost}`;
+            });
+
+            document.getElementById('eventBookingForm').addEventListener('submit', function (event) {
+                event.preventDefault();
+                const confirmationNumber = Math.floor(Math.random() * 1000000);
+                document.getElementById('confirmationNumber').textContent = confirmationNumber;
+                document.getElementById('confirmationMessage').style.display = 'block';
+            });
+        });
+    </script>
+    <script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/1604390dea.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">LeemSuites</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="locations.html">Locations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="meetings-events.html">Meetings & Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="signin.html">Sign In/Join</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Landing Page Content -->
+    <!-- Landing Page Content -->
+<header class="hero-section text-center text-white d-flex align-items-center justify-content-center">
+    <div class="container">
+        <h1 class="display-4">Welcome to LeemSuites</h1>
+        <p class="lead">Experience luxury and comfort like never before</p>
+        <form class="row g-3 mt-3 justify-content-center">
+            <div class="col-auto">
+                <input type="date" class="form-control" placeholder="Check-in">
+            </div>
+            <div class="col-auto">
+                <input type="date" class="form-control" placeholder="Check-out">
+            </div>
+            <div class="col-auto">
+                <select class="form-control">
+                    <option value="">Select Destination</option>
+                    <option>Alabama</option>
+                    <option>Alaska</option>
+                    <option>Arizona</option>
+                    <option>Arkansas</option>
+                    <option>California</option>
+                    <option>Colorado</option>
+                    <option>Connecticut</option>
+                    <option>Delaware</option>
+                    <option>Florida</option>
+                    <option>Georgia</option>
+                    <option>Hawaii</option>
+                    <option>Idaho</option>
+                    <option>Illinois</option>
+                    <option>Indiana</option>
+                    <option>Iowa</option>
+                    <option>Kansas</option>
+                    <option>Kentucky</option>
+                    <option>Louisiana</option>
+                    <option>Maine</option>
+                    <option>Maryland</option>
+                    <option>Massachusetts</option>
+                    <option>Michigan</option>
+                    <option>Minnesota</option>
+                    <option>Mississippi</option>
+                    <option>Missouri</option>
+                    <option>Montana</option>
+                    <option>Nebraska</option>
+                    <option>Nevada</option>
+                    <option>New Hampshire</option>
+                    <option>New Jersey</option>
+                    <option>New Mexico</option>
+                    <option>New York</option>
+                    <option>North Carolina</option>
+                    <option>North Dakota</option>
+                    <option>Ohio</option>
+                    <option>Oklahoma</option>
+                    <option>Oregon</option>
+                    <option>Pennsylvania</option>
+                    <option>Rhode Island</option>
+                    <option>South Carolina</option>
+                    <option>South Dakota</option>
+                    <option>Tennessee</option>
+                    <option>Texas</option>
+                    <option>Utah</option>
+                    <option>Vermont</option>
+                    <option>Virginia</option>
+                    <option>Washington</option>
+                    <option>West Virginia</option>
+                    <option>Wisconsin</option>
+                    <option>Wyoming</option>
+                </select>
+            </div>
+            <div class="col-auto">
+                <button type="button" class="btn btn-primary mb-3" id="search-btn">Search</button>
+            </div>
+        </form>
+    </div>
+</header>
+
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <h2 class="text-center">Discover Our Locations</h2>
+        <div class="row mt-4" id="destinations-container">
+            <div class="col-md-4 animate-on-scroll">
+                <img src="cali.jpg" class="img-fluid clickable" alt="California" data-state="California">
+                <h3 class="mt-2">California</h3>
+                <p>Discover the beauty of the West Coast with our locations in California.</p>
+                <button type="button" class="btn btn-primary book-now-btn mb-3" data-state="California">Book Now</button>
+            </div>
+            <div class="col-md-4 animate-on-scroll">
+                <img src="newyork.jpg" class="img-fluid clickable" alt="New York" data-state="New York">
+                <h3 class="mt-2">New York</h3>
+                <p>Experience the hustle and bustle of the Big Apple with our New York locations.</p>
+                <button type="button" class="btn btn-primary book-now-btn mb-3" data-state="New York">Book Now</button>
+            </div>
+            <div class="col-md-4 animate-on-scroll">
+                <img src="texas.jpg" class="img-fluid clickable" alt="Texas" data-state="Texas">
+                <h3 class="mt-2">Texas</h3>
+                <p>Enjoy the charm and hospitality of the Lone Star State at our Texas locations.</p>
+                <button type="button" class="btn btn-primary book-now-btn" data-state="Texas">Book Now</button>
+            </div>
+            <!-- Add more states similarly -->
+        </div>
+        <div class="row mt-4" id="hotels-container"></div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <p>&copy; 2024 LeemSuites. All rights reserved.</p>
+        <p>Follow us on 
+            <a href="https://www.facebook.com/profile.php?id=61561361492514" class="text-white"><i class="fab fa-facebook-f"></i></a>
+            <a href="www.linkedin.com/in/saalim-mixon-21b468243" class="text-white"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/leemwebsolutionsllc/" class="text-white"><i class="fab fa-instagram"></i></a>
+        </p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts.js"></script>
+    <script>
+        document.getElementById('search-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const destination = document.getElementById('destination').value;
+            if (destination !== 'Select Destination') {
+                sessionStorage.setItem('selectedState', destination);
+                window.location.href = 'hotels.html';
+            }
+        });
+    </script>
+</body>
+</html>

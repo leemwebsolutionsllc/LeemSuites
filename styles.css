@@ -1,0 +1,202 @@
+body {
+    font-family: 'Playfair Display', serif;
+}
+
+.hero-section {
+    background: url('https://placehold.co/1200x800') no-repeat center center/cover;
+    height: 100vh;
+    position: relative;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+.small-hero {
+    background: url('small.jpg') no-repeat center center/cover;
+    height: 50vh;
+    position: relative;
+}
+
+.small-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.small-hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+/* Additional styles for animations */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Footer styling */
+footer {
+    background-color: #222;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    margin: 0 10px;
+}
+
+/* Image hover effect */
+img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+}
+
+/* Navbar link hover effect */
+.navbar-nav .nav-link:hover {
+    color: #007bff !important;
+}
+
+.clickable {
+    cursor: pointer;
+}
+body {
+    font-family: 'Playfair Display', serif;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.container {
+    max-width: 1200px;
+}
+
+input[type="text"], .form-select {
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 1rem;
+}
+
+.btn {
+    border-radius: 30px;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border: none;
+}
+
+.card {
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.card-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.modal-content {
+    border-radius: 15px;
+}
+
+.modal-header {
+    border-bottom: none;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+}
+body {
+    font-family: 'Playfair Display', serif;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.hero-section {
+    background: url('header.jpg') no-repeat center center/cover;
+    height: 100vh;
+}
+
+.hero-section h1, .hero-section p {
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.form-control, .form-select {
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 1rem;
+}
+
+.btn {
+    border-radius: 30px;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        height: auto;
+        padding: 50px 0;
+    }
+
+    .form-control, .form-select, .btn {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+}

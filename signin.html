@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In/Join - Hotel Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/1604390dea.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">LeemSuites</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="locations.html">Locations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="meetings-events.html">Meetings & Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="signin.html">Sign In/Join</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sign In/Join Page Content -->
+    <header class="small-hero text-center text-white d-flex align-items-center justify-content-center">
+        <div class="container">
+            <h1 class="display-4">Sign In or Join</h1>
+            <p class="lead">Access exclusive benefits by joining us</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Sign In</h2>
+                <form id="signInForm">
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="checkbox" id="remember-me">
+                        <label for="remember-me" class="form-label">Remember Me</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Sign In</button>
+                    <div class="mt-3">
+                        <a href="#" class="text-decoration-none">Forgot your password?</a>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <h2>Join</h2>
+                <form id="joinForm">
+                    <div class="mb-3">
+                        <label for="new-email" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="new-email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="new-password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="new-password" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="confirm-password" class="form-label">Confirm Password</label>
+                        <input type="password" class="form-control" id="confirm-password" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="checkbox" id="terms">
+                        <label for="terms" class="form-label">I agree to the <a href="#" class="text-decoration-none">terms and conditions</a></label>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Join</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <p>&copy; 2024 LeemSuites. All rights reserved.</p>
+        <p>Follow us on 
+            <a href="https://www.facebook.com/profile.php?id=61561361492514" class="text-white"><i class="fab fa-facebook-f"></i></a>
+            <a href="www.linkedin.com/in/saalim-mixon-21b468243" class="text-white"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/leemwebsolutionsllc/" class="text-white"><i class="fab fa-instagram"></i></a>
+        </p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const signInForm = document.getElementById('signInForm');
+            const joinForm = document.getElementById('joinForm');
+
+            function showAdminMessage(event) {
+                event.preventDefault();
+                alert("Thank you for your interest, but the admin is not allowing logins or new accounts to be created");
+            }
+
+            signInForm.addEventListener('submit', showAdminMessage);
+            joinForm.addEventListener('submit', showAdminMessage);
+        });
+    </script>
+</body>
+</html>

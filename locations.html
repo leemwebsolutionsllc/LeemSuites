@@ -1,0 +1,1863 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotels - Hotel Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/1604390dea.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">LeemSuites</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="locations.html">Locations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="meetings-events.html">Meetings & Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="signin.html">Sign In/Join</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hotels Page Content -->
+    <header class="small-hero text-center text-white d-flex align-items-center justify-content-center">
+        <div class="container">
+            <h1 class="display-4">Hotels in <span id="selected-state">All Locations</span></h1>
+            <p class="lead">Find the perfect place to stay</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <h2 class="text-center">Available Hotels</h2>
+        <div class="row mt-4" id="hotels-container">
+            <!-- Manually adding hotel listings here -->
+
+            <!-- Example Hotel Card Structure for Alabama -->
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Montgomery.jpg" class="img-fluid rounded-start" alt="Montgomery Haven">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Montgomery Haven (Montgomery, Alabama)</h5>
+                                <p class="card-text">123 Main St, Montgomery, AL 36104</p>
+                                <p class="card-text">A luxurious stay in the heart of Montgomery with top-notch amenities and service.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Montgomery Haven">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Birmingham.jpg" class="img-fluid rounded-start" alt="Birmingham Bliss">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Birmingham Bliss (Birmingham, Alabama)</h5>
+                                <p class="card-text">456 Oak St, Birmingham, AL 35203</p>
+                                <p class="card-text">Experience the vibrant culture of Birmingham with a stay at our centrally located hotel.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Birmingham Bliss">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Alaska -->
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Juneau.jpg" class="img-fluid rounded-start" alt="Juneau Junction">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Juneau Junction (Juneau, Alaska)</h5>
+                                <p class="card-text">789 Pine St, Juneau, AK 99801</p>
+                                <p class="card-text">A perfect retreat in the heart of Juneau, offering breathtaking views and cozy accommodations.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Juneau Junction">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Anchorage.jpg" class="img-fluid rounded-start" alt="Anchorage Oasis">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Anchorage Oasis (Anchorage, Alaska)</h5>
+                                <p class="card-text">101 Maple St, Anchorage, AK 99501</p>
+                                <p class="card-text">Discover the beauty of Anchorage while enjoying the comfort and luxury of our hotel.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Anchorage Oasis">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Arizona -->
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Phoenix.jpg" class="img-fluid rounded-start" alt="Phoenix Pavilion">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Phoenix Pavilion (Phoenix, Arizona)</h5>
+                                <p class="card-text">202 Cedar St, Phoenix, AZ 85001</p>
+                                <p class="card-text">Stay at the Phoenix Pavilion and enjoy world-class amenities and service in the heart of Phoenix.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Phoenix Pavilion">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Tucson.jpg" class="img-fluid rounded-start" alt="Tucson Tranquility">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Tucson Tranquility (Tucson, Arizona)</h5>
+                                <p class="card-text">303 Birch St, Tucson, AZ 85701</p>
+                                <p class="card-text">Relax and unwind at Tucson Tranquility, offering serene surroundings and modern comforts.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Tucson Tranquility">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Arkansas -->
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="LittleRock.jpg" class="img-fluid rounded-start" alt="Little Rock Lodge">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Little Rock Lodge (Little Rock, Arkansas)</h5>
+                                <p class="card-text">404 Elm St, Little Rock, AR 72201</p>
+                                <p class="card-text">Experience southern hospitality at its finest at Little Rock Lodge, your home away from home.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Little Rock Lodge">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Fayetteville.jpg" class="img-fluid rounded-start" alt="Fayetteville Fort">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Fayetteville Fort (Fayetteville, Arkansas)</h5>
+                                <p class="card-text">505 Spruce St, Fayetteville, AR 72701</p>
+                                <p class="card-text">Enjoy a blend of comfort and style at Fayetteville Fort, your ideal destination in Fayetteville.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Fayetteville Fort">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- California -->
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Sacramento.jpg" class="img-fluid rounded-start" alt="Sacramento Central">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Sacramento Central (Sacramento, California)</h5>
+                                <p class="card-text">606 Pine St, Sacramento, CA 95814</p>
+                                <p class="card-text">Discover the charm of Sacramento at Sacramento Central, offering luxury and convenience.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Sacramento Central">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="LA.jpg" class="img-fluid rounded-start" alt="LA Luxury Inn">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">LA Luxury Inn (Los Angeles, California)</h5>
+                                <p class="card-text">707 Sunset Blvd, Los Angeles, CA 90028</p>
+                                <p class="card-text">Experience the glitz and glamour of Los Angeles at LA Luxury Inn, your ultimate getaway.</p>
+                                <button class="btn btn-primary book-now" data-hotel="LA Luxury Inn">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Colorado -->
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Denver.jpg" class="img-fluid rounded-start" alt="Denver Delight">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Denver Delight (Denver, Colorado)</h5>
+                                <p class="card-text">808 Broadway St, Denver, CO 80203</p>
+                                <p class="card-text">Enjoy the vibrant culture of Denver with a stay at Denver Delight, offering premium amenities.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Denver Delight">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Boulder.jpg" class="img-fluid rounded-start" alt="Boulder Bliss">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Boulder Bliss (Boulder, Colorado)</h5>
+                                <p class="card-text">909 Pearl St, Boulder, CO 80302</p>
+                                <p class="card-text">Find tranquility and luxury at Boulder Bliss, nestled in the scenic beauty of Boulder.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Boulder Bliss">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Connecticut -->
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Hartford.jpg" class="img-fluid rounded-start" alt="Hartford Haven">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Hartford Haven (Hartford, Connecticut)</h5>
+                                <p class="card-text">1010 Capitol Ave, Hartford, CT 06106</p>
+                                <p class="card-text">Enjoy a perfect blend of luxury and comfort at Hartford Haven, your gateway to Hartford.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Hartford Haven">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="NewHaven.jpg" class="img-fluid rounded-start" alt="New Haven Nook">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">New Haven Nook (New Haven, Connecticut)</h5>
+                                <p class="card-text">1111 Elm St, New Haven, CT 06510</p>
+                                <p class="card-text">Explore the historic charm of New Haven with a stay at New Haven Nook, offering unmatched comfort.</p>
+                                <button class="btn btn-primary book-now" data-hotel="New Haven Nook">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Delaware -->
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Dover.jpg" class="img-fluid rounded-start" alt="Dover Dwellings">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Dover Dwellings (Dover, Delaware)</h5>
+                                <p class="card-text">1212 State St, Dover, DE 19901</p>
+                                <p class="card-text">Stay at Dover Dwellings for a comfortable and relaxing experience in the heart of Dover.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Dover Dwellings">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Wilmington.jpg" class="img-fluid rounded-start" alt="Wilmington Wonder">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Wilmington Wonder (Wilmington, Delaware)</h5>
+                                <p class="card-text">1313 Market St, Wilmington, DE 19801</p>
+                                <p class="card-text">Discover the wonders of Wilmington with a stay at Wilmington Wonder, offering premium services.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Wilmington Wonder">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Florida -->
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Tallahassee.jpg" class="img-fluid rounded-start" alt="Tallahassee Treat">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Tallahassee Treat (Tallahassee, Florida)</h5>
+                                <p class="card-text">1414 Park Ave, Tallahassee, FL 32301</p>
+                                <p class="card-text">Experience the best of Tallahassee at Tallahassee Treat, offering luxurious accommodations and amenities.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Tallahassee Treat">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Miami.jpg" class="img-fluid rounded-start" alt="Miami Marvel">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Miami Marvel (Miami, Florida)</h5>
+                                <p class="card-text">1515 Ocean Dr, Miami, FL 33139</p>
+                                <p class="card-text">Marvel at the beauty of Miami with a stay at Miami Marvel, your luxurious escape in the heart of the city.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Miami Marvel">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Georgia -->
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Atlanta.jpg" class="img-fluid rounded-start" alt="Atlanta Ambiance">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Atlanta Ambiance (Atlanta, Georgia)</h5>
+                                <p class="card-text">1616 Peachtree St, Atlanta, GA 30309</p>
+                                <p class="card-text">Discover the unique ambiance of Atlanta at Atlanta Ambiance, offering world-class services and amenities.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Atlanta Ambiance">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Savannah.jpg" class="img-fluid rounded-start" alt="Savannah Serenity">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Savannah Serenity (Savannah, Georgia)</h5>
+                                <p class="card-text">1717 Bay St, Savannah, GA 31401</p>
+                                <p class="card-text">Find your serenity at Savannah Serenity, nestled in the historic district of Savannah with unmatched comfort and style.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Savannah Serenity">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hawaii -->
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Honolulu.jpg" class="img-fluid rounded-start" alt="Honolulu Harmony">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Honolulu Harmony (Honolulu, Hawaii)</h5>
+                                <p class="card-text">1818 Waikiki St, Honolulu, HI 96815</p>
+                                <p class="card-text">Experience harmony and luxury at Honolulu Harmony, your perfect Hawaiian getaway.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Honolulu Harmony">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Hilo.jpg" class="img-fluid rounded-start" alt="Hilo Haven">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Hilo Haven (Hilo, Hawaii)</h5>
+                                <p class="card-text">1919 Banyan Dr, Hilo, HI 96720</p>
+                                <p class="card-text">Discover the tranquility of Hilo at Hilo Haven, offering unmatched views and exceptional service.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Hilo Haven">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Idaho -->
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Boise.jpg" class="img-fluid rounded-start" alt="Boise Bliss">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Boise Bliss (Boise, Idaho)</h5>
+                                <p class="card-text">2020 Main St, Boise, ID 83702</p>
+                                <p class="card-text">Enjoy a blissful stay in Boise at Boise Bliss, offering modern comforts and exceptional service.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Boise Bliss">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="IdahoFalls.jpg" class="img-fluid rounded-start" alt="Idaho Falls Inn">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Idaho Falls Inn (Idaho Falls, Idaho)</h5>
+                                <p class="card-text">2121 Grandview Dr, Idaho Falls, ID 83402</p>
+                                <p class="card-text">Experience the beauty of Idaho Falls with a stay at Idaho Falls Inn, your premier choice for luxury accommodations.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Idaho Falls Inn">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Illinois -->
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Springfield.jpg" class="img-fluid rounded-start" alt="Springfield Suites">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Springfield Suites (Springfield, Illinois)</h5>
+                                <p class="card-text">2222 Capitol Ave, Springfield, IL 62701</p>
+                                <p class="card-text">Discover comfort and luxury at Springfield Suites, offering top-notch amenities and exceptional service in Springfield.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Springfield Suites">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Chicago.jpg" class="img-fluid rounded-start" alt="Chicago Central">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Chicago Central (Chicago, Illinois)</h5>
+                                <p class="card-text">2323 Michigan Ave, Chicago, IL 60616</p>
+                                <p class="card-text">Stay in the heart of Chicago at Chicago Central, offering luxury and convenience in the Windy City.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Chicago Central">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Indiana -->
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Indianapolis.jpg" class="img-fluid rounded-start" alt="Indianapolis Inn">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Indianapolis Inn (Indianapolis, Indiana)</h5>
+                                <p class="card-text">2424 Meridian St, Indianapolis, IN 46204</p>
+                                <p class="card-text">Experience the best of Indianapolis with a stay at Indianapolis Inn, offering comfort and luxury in the heart of the city.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Indianapolis Inn">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="FortWayne.jpg" class="img-fluid rounded-start" alt="Fort Wayne Fort">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Fort Wayne Fort (Fort Wayne, Indiana)</h5>
+                                <p class="card-text">2525 Jefferson Blvd, Fort Wayne, IN 46802</p>
+                                <p class="card-text">Stay at Fort Wayne Fort for a perfect blend of comfort and luxury, ideal for both business and leisure travelers.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Fort Wayne Fort">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Iowa -->
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="DesMoines.jpg" class="img-fluid rounded-start" alt="Des Moines Delight">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Des Moines Delight (Des Moines, Iowa)</h5>
+                                <p class="card-text">2626 Grand Ave, Des Moines, IA 50312</p>
+                                <p class="card-text">Experience the delight of Des Moines at Des Moines Delight, offering luxurious accommodations and exceptional service.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Des Moines Delight">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="CedarRapids.jpg" class="img-fluid rounded-start" alt="Cedar Rapids Rest">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Cedar Rapids Rest (Cedar Rapids, Iowa)</h5>
+                                <p class="card-text">2727 1st Ave, Cedar Rapids, IA 52402</p>
+                                <p class="card-text">Find your perfect rest at Cedar Rapids Rest, offering comfort and convenience in Cedar Rapids.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Cedar Rapids Rest">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kansas -->
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Topeka.jpg" class="img-fluid rounded-start" alt="Topeka Tranquil">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Topeka Tranquil (Topeka, Kansas)</h5>
+                                <p class="card-text">2828 Topeka Blvd, Topeka, KS 66611</p>
+                                <p class="card-text">Experience tranquility in Topeka with a stay at Topeka Tranquil, offering modern amenities and exceptional service.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Topeka Tranquil">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Wichita.jpg" class="img-fluid rounded-start" alt="Wichita Wonder">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Wichita Wonder (Wichita, Kansas)</h5>
+                                <p class="card-text">2929 Wichita St, Wichita, KS 67202</p>
+                                <p class="card-text">Discover the wonders of Wichita with a stay at Wichita Wonder, your perfect choice for luxury accommodations.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Wichita Wonder">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kentucky -->
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Frankfort.jpg" class="img-fluid rounded-start" alt="Frankfort Fort">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Frankfort Fort (Frankfort, Kentucky)</h5>
+                                <p class="card-text">3030 Capitol Ave, Frankfort, KY 40601</p>
+                                <p class="card-text">Enjoy a luxurious stay in Frankfort at Frankfort Fort, offering modern amenities and exceptional service.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Frankfort Fort">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Louisville.jpg" class="img-fluid rounded-start" alt="Louisville Lodge">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Louisville Lodge (Louisville, Kentucky)</h5>
+                                <p class="card-text">3131 Louisville Rd, Louisville, KY 40202</p>
+                                <p class="card-text">Discover the charm of Louisville with a stay at Louisville Lodge, offering luxury and convenience.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Louisville Lodge">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Louisiana -->
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="BatonRouge.jpg" class="img-fluid rounded-start" alt="Baton Rouge Retreat">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Baton Rouge Retreat (Baton Rouge, Louisiana)</h5>
+                                <p class="card-text">3232 Government St, Baton Rouge, LA 70806</p>
+                                <p class="card-text">Stay at Baton Rouge Retreat for a luxurious and relaxing experience in the heart of Baton Rouge.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Baton Rouge Retreat">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="NewOrleans.jpg" class="img-fluid rounded-start" alt="New Orleans Oasis">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">New Orleans Oasis (New Orleans, Louisiana)</h5>
+                                <p class="card-text">3333 Canal St, New Orleans, LA 70119</p>
+                                <p class="card-text">Discover the vibrant culture of New Orleans with a stay at New Orleans Oasis, offering exceptional service and luxury accommodations.</p>
+                                <button class="btn btn-primary book-now" data-hotel="New Orleans Oasis">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Maine -->
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Augusta.jpg" class="img-fluid rounded-start" alt="Augusta Ambiance">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Augusta Ambiance (Augusta, Maine)</h5>
+                                <p class="card-text">3434 State St, Augusta, ME 04330</p>
+                                <p class="card-text">Experience the unique ambiance of Augusta at Augusta Ambiance, offering luxurious accommodations and modern amenities.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Augusta Ambiance">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Portland.jpg" class="img-fluid rounded-start" alt="Portland Place">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Portland Place (Portland, Maine)</h5>
+                                <p class="card-text">3535 Congress St, Portland, ME 04101</p>
+                                <p class="card-text">Discover the charm of Portland with a stay at Portland Place, offering luxury and comfort in the heart of the city.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Portland Place">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Maryland -->
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Annapolis.jpg" class="img-fluid rounded-start" alt="Annapolis Abode">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Annapolis Abode (Annapolis, Maryland)</h5>
+                                <p class="card-text">3636 Main St, Annapolis, MD 21401</p>
+                                <p class="card-text">Stay at Annapolis Abode for a luxurious and relaxing experience in the heart of Annapolis.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Annapolis Abode">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Baltimore.jpg" class="img-fluid rounded-start" alt="Baltimore Bliss">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Baltimore Bliss (Baltimore, Maryland)</h5>
+                                <p class="card-text">3737 Charles St, Baltimore, MD 21201</p>
+                                <p class="card-text">Experience the best of Baltimore with a stay at Baltimore Bliss, offering luxurious accommodations and modern amenities.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Baltimore Bliss">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Massachusetts -->
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Boston.jpg" class="img-fluid rounded-start" alt="Boston Bliss">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Boston Bliss (Boston, Massachusetts)</h5>
+                                <p class="card-text">3838 Beacon St, Boston, MA 02108</p>
+                                <p class="card-text">Stay in the heart of Boston at Boston Bliss, offering luxury and convenience in the historic city.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Boston Bliss">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Worcester.jpg" class="img-fluid rounded-start" alt="Worcester Wonder">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Worcester Wonder (Worcester, Massachusetts)</h5>
+                                <p class="card-text">3939 Main St, Worcester, MA 01608</p>
+                                <p class="card-text">Discover the wonders of Worcester with a stay at Worcester Wonder, offering luxurious accommodations and exceptional service.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Worcester Wonder">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Michigan -->
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Lansing.jpg" class="img-fluid rounded-start" alt="Lansing Lodge">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Lansing Lodge (Lansing, Michigan)</h5>
+                                <p class="card-text">4040 Capitol Ave, Lansing, MI 48933</p>
+                                <p class="card-text">Experience comfort and luxury at Lansing Lodge, offering modern amenities and exceptional service in Lansing.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Lansing Lodge">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Detroit.jpg" class="img-fluid rounded-start" alt="Detroit Delight">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Detroit Delight (Detroit, Michigan)</h5>
+                                <p class="card-text">4141 Woodward Ave, Detroit, MI 48201</p>
+                                <p class="card-text">Stay in the heart of Detroit at Detroit Delight, offering luxury and convenience in the Motor City.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Detroit Delight">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Minnesota -->
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="SaintPaul.jpg" class="img-fluid rounded-start" alt="Saint Paul Suites">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Saint Paul Suites (Saint Paul, Minnesota)</h5>
+                                <p class="card-text">4242 Summit Ave, Saint Paul, MN 55105</p>
+                                <p class="card-text">Discover luxury and comfort at Saint Paul Suites, offering modern amenities and exceptional service in Saint Paul.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Saint Paul Suites">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Minneapolis.jpg" class="img-fluid rounded-start" alt="Minneapolis Marvel">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Minneapolis Marvel (Minneapolis, Minnesota)</h5>
+                                <p class="card-text">4343 Hennepin Ave, Minneapolis, MN 55408</p>
+                                <p class="card-text">Stay in the heart of Minneapolis at Minneapolis Marvel, offering luxury and convenience in the vibrant city.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Minneapolis Marvel">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mississippi -->
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Jackson.jpg" class="img-fluid rounded-start" alt="Jackson Jewel">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Jackson Jewel (Jackson, Mississippi)</h5>
+                                <p class="card-text">4444 Capitol St, Jackson, MS 39201</p>
+                                <p class="card-text">Discover the jewel of Jackson with a stay at Jackson Jewel, offering luxurious accommodations and modern amenities.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Jackson Jewel">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Gulfport.jpg" class="img-fluid rounded-start" alt="Gulfport Grand">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Gulfport Grand (Gulfport, Mississippi)</h5>
+                                <p class="card-text">4545 Beach Blvd, Gulfport, MS 39501</p>
+                                <p class="card-text">Experience the grandeur of Gulfport with a stay at Gulfport Grand, offering exceptional service and luxury accommodations.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Gulfport Grand">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Missouri -->
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="JeffersonCity.jpg" class="img-fluid rounded-start" alt="Jefferson City Joy">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Jefferson City Joy (Jefferson City, Missouri)</h5>
+                                <p class="card-text">4646 Capitol Ave, Jefferson City, MO 65101</p>
+                                <p class="card-text">Discover the joy of Jefferson City with a stay at Jefferson City Joy, offering luxurious accommodations and modern amenities.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Jefferson City Joy">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="KansasCity.jpg" class="img-fluid rounded-start" alt="Kansas City Comfort">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Kansas City Comfort (Kansas City, Missouri)</h5>
+                                <p class="card-text">4747 Main St, Kansas City, MO 64111</p>
+                                <p class="card-text">Experience the comfort of Kansas City with a stay at Kansas City Comfort, offering exceptional service and modern amenities.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Kansas City Comfort">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Montana -->
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Helen.jpg" class="img-fluid rounded-start" alt="Helena Haven">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Helena Haven (Helena, Montana)</h5>
+                                <p class="card-text">4848 Capitol St, Helena, MT 59601</p>
+                                <p class="card-text">Find your perfect haven in Helena with a stay at Helena Haven, offering luxury and comfort in the heart of Montana.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Helena Haven">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Billings.jpg" class="img-fluid rounded-start" alt="Billings Bliss">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Billings Bliss (Billings, Montana)</h5>
+                                <p class="card-text">4949 Grand Ave, Billings, MT 59101</p>
+                                <p class="card-text">Experience bliss in Billings with a stay at Billings Bliss, offering luxurious accommodations and modern amenities.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Billings Bliss">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nebraska -->
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Lincoln.jpg" class="img-fluid rounded-start" alt="Lincoln Luxury">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Lincoln Luxury (Lincoln, Nebraska)</h5>
+                                <p class="card-text">5050 Capitol St, Lincoln, NE 68508</p>
+                                <p class="card-text">Discover luxury in Lincoln with a stay at Lincoln Luxury, offering exceptional service and modern amenities.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Lincoln Luxury">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Omaha.jpg" class="img-fluid rounded-start" alt="Omaha Oasis">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Omaha Oasis (Omaha, Nebraska)</h5>
+                                <p class="card-text">5151 Dodge St, Omaha, NE 68132</p>
+                                <p class="card-text">Find your perfect oasis in Omaha with a stay at Omaha Oasis, offering luxury and comfort in the heart of the city.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Omaha Oasis">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nevada -->
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="CarsonCity.jpg" class="img-fluid rounded-start" alt="Carson City Comfort">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Carson City Comfort (Carson City, Nevada)</h5>
+                                <p class="card-text">5252 Capitol St, Carson City, NV 89701</p>
+                                <p class="card-text">Experience comfort and luxury in Carson City with a stay at Carson City Comfort, offering modern amenities and exceptional service.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Carson City Comfort">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="LasVegas.jpg" class="img-fluid rounded-start" alt="Las Vegas Luxury">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Las Vegas Luxury (Las Vegas, Nevada)</h5>
+                                <p class="card-text">5353 Las Vegas Blvd, Las Vegas, NV 89101</p>
+                                <p class="card-text">Stay in the heart of Las Vegas at Las Vegas Luxury, offering exceptional service and luxurious accommodations.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Las Vegas Luxury">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- New Hampshire -->
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Concord.jpg" class="img-fluid rounded-start" alt="Concord Comfort">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Concord Comfort (Concord, New Hampshire)</h5>
+                                <p class="card-text">5454 Capitol St, Concord, NH 03301</p>
+                                <p class="card-text">Experience comfort and luxury in Concord with a stay at Concord Comfort, offering modern amenities and exceptional service.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Concord Comfort">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Manchester.jpg" class="img-fluid rounded-start" alt="Manchester Marvel">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Manchester Marvel (Manchester, New Hampshire)</h5>
+                                <p class="card-text">5555 Elm St, Manchester, NH 03101</p>
+                                <p class="card-text">Stay in the heart of Manchester at Manchester Marvel, offering luxury and convenience in the vibrant city.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Manchester Marvel">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- New Jersey -->
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Trenton.jpg" class="img-fluid rounded-start" alt="Trenton Treat">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Trenton Treat (Trenton, New Jersey)</h5>
+                                <p class="card-text">5656 Capitol St, Trenton, NJ 08608</p>
+                                <p class="card-text">Discover the treat of Trenton with a stay at Trenton Treat, offering luxurious accommodations and modern amenities.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Trenton Treat">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Newark.jpg" class="img-fluid rounded-start" alt="Newark Nook">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Newark Nook (Newark, New Jersey)</h5>
+                                <p class="card-text">5757 Market St, Newark, NJ 07102</p>
+                                <p class="card-text">Stay in the heart of Newark at Newark Nook, offering luxury and convenience in the vibrant city.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Newark Nook">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- New Mexico -->
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="SantaFe.jpg" class="img-fluid rounded-start" alt="Santa Fe Serenity">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Santa Fe Serenity (Santa Fe, New Mexico)</h5>
+                                <p class="card-text">5858 Capitol St, Santa Fe, NM 87501</p>
+                                <p class="card-text">Find your serenity in Santa Fe with a stay at Santa Fe Serenity, offering luxurious accommodations and modern amenities.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Santa Fe Serenity">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Albuquerque.jpg" class="img-fluid rounded-start" alt="Albuquerque Abode">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Albuquerque Abode (Albuquerque, New Mexico)</h5>
+                                <p class="card-text">5959 Central Ave, Albuquerque, NM 87102</p>
+                                <p class="card-text">Stay in the heart of Albuquerque at Albuquerque Abode, offering luxury and convenience in the vibrant city.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Albuquerque Abode">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- New York -->
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Albany.jpg" class="img-fluid rounded-start" alt="Albany Premier">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Albany Premier (Albany, New York)</h5>
+                                <p class="card-text">6060 Capitol St, Albany, NY 12207</p>
+                                <p class="card-text">Experience premier luxury in Albany with a stay at Albany Premier, offering exceptional service and modern amenities.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Albany Premier">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="NYC.jpg" class="img-fluid rounded-start" alt="NYC Grand Hotel">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">NYC Grand Hotel (New York City, New York)</h5>
+                                <p class="card-text">6161 Broadway St, New York City, NY 10001</p>
+                                <p class="card-text">Stay in the heart of New York City at NYC Grand Hotel, offering luxury and convenience in the vibrant city.</p>
+                                <button class="btn btn-primary book-now" data-hotel="NYC Grand Hotel">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- North Carolina -->
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Raleigh.jpg" class="img-fluid rounded-start" alt="Raleigh Retreat">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Raleigh Retreat (Raleigh, North Carolina)</h5>
+                                <p class="card-text">6262 Fayetteville St, Raleigh, NC 27601</p>
+                                <p class="card-text">Experience luxury and comfort at Raleigh Retreat, offering modern amenities and exceptional service in Raleigh.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Raleigh Retreat">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Charlotte.jpg" class="img-fluid rounded-start" alt="Charlotte Comfort">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Charlotte Comfort (Charlotte, North Carolina)</h5>
+                                <p class="card-text">6363 Trade St, Charlotte, NC 28202</p>
+                                <p class="card-text">Stay in the heart of Charlotte at Charlotte Comfort, offering luxury and convenience in the vibrant city.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Charlotte Comfort">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- North Dakota -->
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Bismarck.jpg" class="img-fluid rounded-start" alt="Bismarck Bliss">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Bismarck Bliss (Bismarck, North Dakota)</h5>
+                                <p class="card-text">6464 Capitol St, Bismarck, ND 58501</p>
+                                <p class="card-text">Discover bliss in Bismarck with a stay at Bismarck Bliss, offering luxurious accommodations and modern amenities.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Bismarck Bliss">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Fargo.jpg" class="img-fluid rounded-start" alt="Fargo Fort">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Fargo Fort (Fargo, North Dakota)</h5>
+                                <p class="card-text">6565 Broadway St, Fargo, ND 58102</p>
+                                <p class="card-text">Stay in the heart of Fargo at Fargo Fort, offering luxury and convenience in the vibrant city.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Fargo Fort">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ohio -->
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Columbus.jpg" class="img-fluid rounded-start" alt="Columbus Comfort">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Columbus Comfort (Columbus, Ohio)</h5>
+                                <p class="card-text">6666 High St, Columbus, OH 43215</p>
+                                <p class="card-text">Experience comfort and luxury in Columbus with a stay at Columbus Comfort, offering modern amenities and exceptional service.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Columbus Comfort">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Cleveland.jpg" class="img-fluid rounded-start" alt="Cleveland Comfort">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Cleveland Comfort (Cleveland, Ohio)</h5>
+                                <p class="card-text">6767 Euclid Ave, Cleveland, OH 44103</p>
+                                <p class="card-text">Stay in the heart of Cleveland at Cleveland Comfort, offering luxury and convenience in the vibrant city.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Cleveland Comfort">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Oklahoma -->
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="OklahomaCity.jpg" class="img-fluid rounded-start" alt="Oklahoma City Oasis">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Oklahoma City Oasis (Oklahoma City, Oklahoma)</h5>
+                                <p class="card-text">6868 Robinson Ave, Oklahoma City, OK 73102</p>
+                                <p class="card-text">Discover an oasis of comfort and luxury in Oklahoma City with a stay at Oklahoma City Oasis, offering modern amenities and exceptional service.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Oklahoma City Oasis">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Tulsa.jpg" class="img-fluid rounded-start" alt="Tulsa Tranquil">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Tulsa Tranquil (Tulsa, Oklahoma)</h5>
+                                <p class="card-text">6969 Peoria Ave, Tulsa, OK 74105</p>
+                                <p class="card-text">Find tranquility and luxury in Tulsa with a stay at Tulsa Tranquil, offering modern amenities and exceptional service.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Tulsa Tranquil">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Oregon -->
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Salem.jpg" class="img-fluid rounded-start" alt="Salem Serenity">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Salem Serenity (Salem, Oregon)</h5>
+                                <p class="card-text">7070 Capitol St, Salem, OR 97301</p>
+                                <p class="card-text">Experience serenity in Salem with a stay at Salem Serenity, offering luxurious accommodations and modern amenities.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Salem Serenity">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Portland.jpg" class="img-fluid rounded-start" alt="Portland Place">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Portland Place (Portland, Oregon)</h5>
+                                <p class="card-text">7171 Broadway St, Portland, OR 97209</p>
+                                <p class="card-text">Stay in the heart of Portland at Portland Place, offering luxury and convenience in the vibrant city.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Portland Place">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pennsylvania -->
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Harrisburg.jpg" class="img-fluid rounded-start" alt="Harrisburg Haven">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Harrisburg Haven (Harrisburg, Pennsylvania)</h5>
+                                <p class="card-text">7272 Capitol St, Harrisburg, PA 17101</p>
+                                <p class="card-text">Find your perfect haven in Harrisburg with a stay at Harrisburg Haven, offering luxurious accommodations and modern amenities.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Harrisburg Haven">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Philadelphia.jpg" class="img-fluid rounded-start" alt="Philadelphia Fort">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Philadelphia Fort (Philadelphia, Pennsylvania)</h5>
+                                <p class="card-text">7373 Market St, Philadelphia, PA 19103</p>
+                                <p class="card-text">Stay in the heart of Philadelphia at Philadelphia Fort, offering luxury and convenience in the historic city.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Philadelphia Fort">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rhode Island -->
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Providence.jpg" class="img-fluid rounded-start" alt="Providence Premier">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Providence Premier (Providence, Rhode Island)</h5>
+                                <p class="card-text">7474 Capitol St, Providence, RI 02903</p>
+                                <p class="card-text">Experience premier luxury in Providence with a stay at Providence Premier, offering exceptional service and modern amenities.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Providence Premier">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Warwick.jpg" class="img-fluid rounded-start" alt="Warwick Wonder">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Warwick Wonder (Warwick, Rhode Island)</h5>
+                                <p class="card-text">7575 Main St, Warwick, RI 02886</p>
+                                <p class="card-text">Discover the wonders of Warwick with a stay at Warwick Wonder, offering luxurious accommodations and exceptional service.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Warwick Wonder">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- South Carolina -->
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Columbia.jpg" class="img-fluid rounded-start" alt="Columbia Comfort">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Columbia Comfort (Columbia, South Carolina)</h5>
+                                <p class="card-text">7676 Gervais St, Columbia, SC 29201</p>
+                                <p class="card-text">Experience comfort and luxury in Columbia with a stay at Columbia Comfort, offering modern amenities and exceptional service.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Columbia Comfort">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Charleston.jpg" class="img-fluid rounded-start" alt="Charleston Charm">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Charleston Charm (Charleston, South Carolina)</h5>
+                                <p class="card-text">7777 King St, Charleston, SC 29401</p>
+                                <p class="card-text">Stay in the heart of Charleston at Charleston Charm, offering luxury and convenience in the historic city.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Charleston Charm">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- South Dakota -->
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Pierre.jpg" class="img-fluid rounded-start" alt="Pierre Place">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Pierre Place (Pierre, South Dakota)</h5>
+                                <p class="card-text">7878 Capitol St, Pierre, SD 57501</p>
+                                <p class="card-text">Discover luxury and comfort in Pierre with a stay at Pierre Place, offering modern amenities and exceptional service.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Pierre Place">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="SiouxFalls.jpg" class="img-fluid rounded-start" alt="Sioux Falls Serenity">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Sioux Falls Serenity (Sioux Falls, South Dakota)</h5>
+                                <p class="card-text">7979 Minnesota Ave, Sioux Falls, SD 57104</p>
+                                <p class="card-text">Find your perfect serenity in Sioux Falls with a stay at Sioux Falls Serenity, offering luxurious accommodations and modern amenities.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Sioux Falls Serenity">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tennessee -->
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Nashville.jpg" class="img-fluid rounded-start" alt="Nashville Nest">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Nashville Nest (Nashville, Tennessee)</h5>
+                                <p class="card-text">8080 Broadway St, Nashville, TN 37203</p>
+                                <p class="card-text">Experience the best of Nashville with a stay at Nashville Nest, offering luxurious accommodations and modern amenities.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Nashville Nest">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Memphis.jpg" class="img-fluid rounded-start" alt="Memphis Marvel">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Memphis Marvel (Memphis, Tennessee)</h5>
+                                <p class="card-text">8181 Beale St, Memphis, TN 38103</p>
+                                <p class="card-text">Stay in the heart of Memphis at Memphis Marvel, offering luxury and convenience in the vibrant city.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Memphis Marvel">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Texas -->
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Austin.jpg" class="img-fluid rounded-start" alt="Austin Retreat">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Austin Retreat (Austin, Texas)</h5>
+                                <p class="card-text">8282 Congress Ave, Austin, TX 78701</p>
+                                <p class="card-text">Experience a luxurious retreat in Austin with a stay at Austin Retreat, offering modern amenities and exceptional service.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Austin Retreat">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Houston.jpg" class="img-fluid rounded-start" alt="Houston Heights">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Houston Heights (Houston, Texas)</h5>
+                                <p class="card-text">8383 Main St, Houston, TX 77002</p>
+                                <p class="card-text">Stay in the heart of Houston at Houston Heights, offering luxury and convenience in the vibrant city.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Houston Heights">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Utah -->
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="SaltLake.jpg" class="img-fluid rounded-start" alt="Salt Lake Serenity">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Salt Lake Serenity (Salt Lake City, Utah)</h5>
+                                <p class="card-text">8484 Capitol St, Salt Lake City, UT 84101</p>
+                                <p class="card-text">Find serenity in Salt Lake City with a stay at Salt Lake Serenity, offering luxurious accommodations and modern amenities.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Salt Lake Serenity">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Provo.jpg" class="img-fluid rounded-start" alt="Provo Place">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Provo Place (Provo, Utah)</h5>
+                                <p class="card-text">8585 University Ave, Provo, UT 84601</p>
+                                <p class="card-text">Stay in the heart of Provo at Provo Place, offering luxury and convenience in the vibrant city.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Provo Place">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vermont -->
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Montpelier.jpg" class="img-fluid rounded-start" alt="Montpelier Marvel">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Montpelier Marvel (Montpelier, Vermont)</h5>
+                                <p class="card-text">8686 State St, Montpelier, VT 05602</p>
+                                <p class="card-text">Discover the marvel of Montpelier with a stay at Montpelier Marvel, offering luxurious accommodations and modern amenities.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Montpelier Marvel">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Burlington.jpg" class="img-fluid rounded-start" alt="Burlington Bliss">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Burlington Bliss (Burlington, Vermont)</h5>
+                                <p class="card-text">8787 Church St, Burlington, VT 05401</p>
+                                <p class="card-text">Find your bliss in Burlington with a stay at Burlington Bliss, offering luxurious accommodations and modern amenities.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Burlington Bliss">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Virginia -->
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Richmond.jpg" class="img-fluid rounded-start" alt="Richmond Retreat">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Richmond Retreat (Richmond, Virginia)</h5>
+                                <p class="card-text">8888 Main St, Richmond, VA 23219</p>
+                                <p class="card-text">Experience a luxurious retreat in Richmond with a stay at Richmond Retreat, offering modern amenities and exceptional service.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Richmond Retreat">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="VirginiaBeach.jpg" class="img-fluid rounded-start" alt="Virginia Beach Villas">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Virginia Beach Villas (Virginia Beach, Virginia)</h5>
+                                <p class="card-text">8989 Atlantic Ave, Virginia Beach, VA 23451</p>
+                                <p class="card-text">Stay in the heart of Virginia Beach at Virginia Beach Villas, offering luxury and convenience in the vibrant city.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Virginia Beach Villas">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Washington -->
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Olympia.jpg" class="img-fluid rounded-start" alt="Olympia Oasis">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Olympia Oasis (Olympia, Washington)</h5>
+                                <p class="card-text">9090 Capitol St, Olympia, WA 98501</p>
+                                <p class="card-text">Find your perfect oasis in Olympia with a stay at Olympia Oasis, offering luxury and comfort in the heart of the city.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Olympia Oasis">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Seattle.jpg" class="img-fluid rounded-start" alt="Seattle Suites">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Seattle Suites (Seattle, Washington)</h5>
+                                <p class="card-text">9191 Pike St, Seattle, WA 98101</p>
+                                <p class="card-text">Stay in the heart of Seattle at Seattle Suites, offering luxury and convenience in the vibrant city.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Seattle Suites">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- West Virginia -->
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Charleston.jpg" class="img-fluid rounded-start" alt="Charleston Charm">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Charleston Charm (Charleston, West Virginia)</h5>
+                                <p class="card-text">9292 Capitol St, Charleston, WV 25301</p>
+                                <p class="card-text">Experience the charm of Charleston with a stay at Charleston Charm, offering luxurious accommodations and modern amenities.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Charleston Charm">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Huntington.jpg" class="img-fluid rounded-start" alt="Huntington Haven">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Huntington Haven (Huntington, West Virginia)</h5>
+                                <p class="card-text">9393 4th Ave, Huntington, WV 25701</p>
+                                <p class="card-text">Find your perfect haven in Huntington with a stay at Huntington Haven, offering luxury and comfort in the heart of the city.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Huntington Haven">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Wisconsin -->
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Madison.jpg" class="img-fluid rounded-start" alt="Madison Marvel">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Madison Marvel (Madison, Wisconsin)</h5>
+                                <p class="card-text">9494 Capitol St, Madison, WI 53703</p>
+                                <p class="card-text">Discover the marvel of Madison with a stay at Madison Marvel, offering luxurious accommodations and modern amenities.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Madison Marvel">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Milwaukee.jpg" class="img-fluid rounded-start" alt="Milwaukee Magic">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Milwaukee Magic (Milwaukee, Wisconsin)</h5>
+                                <p class="card-text">9595 Wisconsin Ave, Milwaukee, WI 53202</p>
+                                <p class="card-text">Stay in the heart of Milwaukee at Milwaukee Magic, offering luxury and convenience in the vibrant city.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Milwaukee Magic">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Wyoming -->
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Cheyenne.jpg" class="img-fluid rounded-start" alt="Cheyenne Comfort">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Cheyenne Comfort (Cheyenne, Wyoming)</h5>
+                                <p class="card-text">9696 Capitol Ave, Cheyenne, WY 82001</p>
+                                <p class="card-text">Experience comfort and luxury in Cheyenne with a stay at Cheyenne Comfort, offering modern amenities and exceptional service.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Cheyenne Comfort">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 animate-on-scroll mb-3">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Jackson.jpg" class="img-fluid rounded-start" alt="Jackson Jewel">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Jackson Jewel (Jackson, Wyoming)</h5>
+                                <p class="card-text">9797 Main St, Jackson, WY 83001</p>
+                                <p class="card-text">Discover the jewel of Jackson with a stay at Jackson Jewel, offering luxurious accommodations and modern amenities.</p>
+                                <button class="btn btn-primary book-now" data-hotel="Jackson Jewel">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- End of Manually added hotel listings -->
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <p>&copy; 2024 LeemSuites. All rights reserved.</p>
+        <p>Follow us on 
+            <a href="https://www.facebook.com/profile.php?id=61561361492514" class="text-white"><i class="fab fa-facebook-f"></i></a>
+            <a href="www.linkedin.com/in/saalim-mixon-21b468243" class="text-white"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/leemwebsolutionsllc/" class="text-white"><i class="fab fa-instagram"></i></a>
+        </p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
